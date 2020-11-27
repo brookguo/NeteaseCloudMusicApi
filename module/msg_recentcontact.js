@@ -1,15 +1,15 @@
-// 国家编码列表
+// 最近联系
+
 module.exports = (query, request) => {
   const data = {}
   return request(
     'POST',
-    `https://interface3.music.163.com/eapi/lbs/countries/v1`,
+    `https://music.163.com/api/msg/recentcontact/get`,
     data,
     {
-      crypto: 'eapi',
+      crypto: 'weapi',
       cookie: query.cookie,
       proxy: query.proxy,
-      url: '/api/lbs/countries/v1',
       realIP: query.realIP,
     },
   )
